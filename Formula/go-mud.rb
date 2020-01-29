@@ -2,24 +2,24 @@
 class GoMud < Formula
   desc "一个用 Go 语言开发的 MUD 客户端"
   homepage "https://github.com/mudclient/go-mud"
-  version "0.6.1-RC7"
+  version "0.6.1"
   bottle :unneeded
 
   if OS.mac?
-    url "https://github.com/mudclient/go-mud/releases/download/v0.6.1-RC7/go-mud_v0.6.1-RC7_Darwin_x86_64.tar.gz"
-    sha256 "fadf4cbe81d50e1b1cb433fe0df5a619ce733cd2fe84411c8ac1072037c38d23"
+    url "https://github.com/mudclient/go-mud/releases/download/v0.6.1/go-mud_v0.6.1_Darwin_x86_64.tar.gz"
+    sha256 "db8dd5b04b3460a9049d50bc8d111592524bb390b7f976d8553ed324f35f21c5"
   elsif OS.linux?
     if Hardware::CPU.intel?
-      url "https://github.com/mudclient/go-mud/releases/download/v0.6.1-RC7/go-mud_v0.6.1-RC7_Linux_x86_64.tar.gz"
-      sha256 "893700df982a26185973636b21607c57981aa0791dd1a9743ed2feaf2dad944f"
+      url "https://github.com/mudclient/go-mud/releases/download/v0.6.1/go-mud_v0.6.1_Linux_x86_64.tar.gz"
+      sha256 "b7118b2a4ea3e9d1c53535bba336bed4e0e9b2f52a60e1dd358e227785928c33"
     end
     if Hardware::CPU.arm?
       if Hardware::CPU.is_64_bit?
-        url "https://github.com/mudclient/go-mud/releases/download/v0.6.1-RC7/go-mud_v0.6.1-RC7_Linux_ARMv8.tar.gz"
-        sha256 "58e6c31c2296bdf824f1dd3d26186d94fdb3271ac74b186798e7d448f5f89de6"
+        url "https://github.com/mudclient/go-mud/releases/download/v0.6.1/go-mud_v0.6.1_Linux_ARMv8.tar.gz"
+        sha256 "1edd45b93c5d9b491d0974387d1f8ed6da1b770123d065ac44b50f64132a2ee9"
       else
-        url "https://github.com/mudclient/go-mud/releases/download/v0.6.1-RC7/go-mud_v0.6.1-RC7_Linux_ARMv6.tar.gz"
-        sha256 "bc8575d8f9a6a630c5fb84bdbba1d7f8c06d3de33e22845fe86e96b23f8951cc"
+        url "https://github.com/mudclient/go-mud/releases/download/v0.6.1/go-mud_v0.6.1_Linux_ARMv6.tar.gz"
+        sha256 "7061f210dddc22139571f8666f7ca55948c50be45e88a541e91010dd50214dca"
       end
     end
   end
