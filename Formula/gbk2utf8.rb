@@ -2,16 +2,16 @@
 class Gbk2utf8 < Formula
   desc "GB2312/GBK/GB18030 与 UTF-8 的编码转换器"
   homepage "https://github.com/fluffos/gbk2utf8"
-  version "1.0.1"
+  version "1.0.2"
   bottle :unneeded
 
   if OS.mac?
-    url "https://github.com/fluffos/gbk2utf8/releases/download/v1.0.1/gbk2utf8_v1.0.1_Darwin_x86_64.tar.gz"
-    sha256 "d49e4211ac363367ae0905283276dbbb0c672b7377c2f33c577057c360407945"
+    url "https://github.com/fluffos/gbk2utf8/releases/download/v1.0.2/gbk2utf8_v1.0.2_Darwin_x86_64.tar.gz"
+    sha256 "1c8e673d26e2d11f07d2889d04d51954d5e94b36c0ed3528f35bb915f58ed21b"
   elsif OS.linux?
     if Hardware::CPU.intel?
-      url "https://github.com/fluffos/gbk2utf8/releases/download/v1.0.1/gbk2utf8_v1.0.1_Linux_x86_64.tar.gz"
-      sha256 "09920a5d428fe46d41000f149414e80bda8f300f4c9d9ae7c5af6ddd8ab243b1"
+      url "https://github.com/fluffos/gbk2utf8/releases/download/v1.0.2/gbk2utf8_v1.0.2_Linux_x86_64.tar.gz"
+      sha256 "0435a3c40024732923043f054e32b9b5f3cc23ee1d592c3ecf0fb456672cbc84"
     end
   end
 
