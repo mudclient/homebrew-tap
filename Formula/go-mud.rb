@@ -2,26 +2,24 @@
 class GoMud < Formula
   desc "一个用 Go 语言开发的 MUD 客户端"
   homepage "https://github.com/mudclient/go-mud"
-  version "0.6.5"
+  version "0.6.6"
   bottle :unneeded
 
   if OS.mac?
-    url "https://github.com/mudclient/go-mud/releases/download/v0.6.5/go-mud_v0.6.5_Darwin_x86_64.tar.gz"
-    sha256 "7656b47170c9b51aaa22c6ab2ef639dc4dfbf4792839f3b7f7a17f870938c3dd"
-  elsif OS.linux?
-    if Hardware::CPU.intel?
-      url "https://github.com/mudclient/go-mud/releases/download/v0.6.5/go-mud_v0.6.5_Linux_x86_64.tar.gz"
-      sha256 "f96dd540f4e9431ccb6dd5e0376ff70c67985eb3c05706d2b2eeb20ea1079057"
-    end
-    if Hardware::CPU.arm?
-      if Hardware::CPU.is_64_bit?
-        url "https://github.com/mudclient/go-mud/releases/download/v0.6.5/go-mud_v0.6.5_Linux_ARMv8.tar.gz"
-        sha256 "813b49df25f005ab2bad46396f87026f6bcc2661b4bc4e13d06631b5f4b7ee3b"
-      else
-        url "https://github.com/mudclient/go-mud/releases/download/v0.6.5/go-mud_v0.6.5_Linux_ARMv6.tar.gz"
-        sha256 "c38dea0ae09cc709cc7257b5cb57e07f0f8aa0d7e6acd5a966104258327da2dc"
-      end
-    end
+    url "https://github.com/mudclient/go-mud/releases/download/v0.6.6/go-mud_v0.6.6_Darwin_x86_64.tar.gz"
+    sha256 "074c56f155123a3cd948eb3913fdad75b74f6031bdf9ea2072c17270105a9351"
+  end
+  if OS.linux? && Hardware::CPU.intel?
+    url "https://github.com/mudclient/go-mud/releases/download/v0.6.6/go-mud_v0.6.6_Linux_x86_64.tar.gz"
+    sha256 "e08567cf471d987f02ba185597e09a5c1d4d7945a7f69f62015557fc28b94297"
+  end
+  if OS.linux? && Hardware::CPU.arm? && !Hardware::CPU.is_64_bit?
+    url "https://github.com/mudclient/go-mud/releases/download/v0.6.6/go-mud_v0.6.6_Linux_ARMv6.tar.gz"
+    sha256 "a3a129c84b32576be083d0e8c15a0826b3ad66717f9d86eec816be4228f9b6b2"
+  end
+  if OS.linux? && Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
+    url "https://github.com/mudclient/go-mud/releases/download/v0.6.6/go-mud_v0.6.6_Linux_ARMv8.tar.gz"
+    sha256 "b20539fe880b636bdc42ea8e364837ad59a7d240dd9d3f90874398db3df2cc2d"
   end
 
   def install
